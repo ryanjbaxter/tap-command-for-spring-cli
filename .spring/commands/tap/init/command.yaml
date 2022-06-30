@@ -1,0 +1,45 @@
+command:
+  description: Creates a workload.yaml and Tiltfile
+  options:
+    #
+    - name: name
+      description: Name of the workload
+      dataType: string
+      optional: false
+      defaultValue: demo
+      inputType: text    # TEXT
+    - name: workload-type
+      description: Type of workload
+      dataType: string
+      defaultValue: web
+      inputType: text    # TEXT
+    - name: git-url
+      description: Git repo of the source code
+      dataType: string
+      defaultValue: https://github.com/org/repo
+      inputType: text    # TEXT
+    - name: git-branch
+      description: Git branch of the source code
+      dataType: string
+      defaultValue: main
+      inputType: text    # TEXT
+    - name: source-image
+      description: Docker repository to place the image
+      dataType: string
+      defaultValue: https://repo.me.com/repo/imagename
+      inputType: text    # TEXT
+    - name: local-path
+      description: Path to project code
+      dataType: string
+      defaultValue: ./
+      inputType: text    # TEXT
+    - name: namespace
+      description: Kubernetes namespace to deploy the app to
+      dataType: string
+      defaultValue: default
+      inputType: text    # TEXT
+    - name: workload-yaml-path
+      description: Path to your workload.yaml
+      dataType: string
+      defaultValue: ./workload.yaml
+      inputType: text    # TEXT

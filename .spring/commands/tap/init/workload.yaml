@@ -1,0 +1,17 @@
+---
+action:
+  generate: workload.yaml
+---
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: {{name}}
+  labels:
+    apps.tanzu.vmware.com/workload-type: {{workload-type}}
+    app.kubernetes.io/part-of: {{name}}
+spec:
+  source:
+    git:
+      url: {{git-url}}
+      ref:
+        branch: {{git-branch}}
